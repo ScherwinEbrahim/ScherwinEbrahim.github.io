@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scherwin Ebrahim for Zalando Sports</title>
+<meta name="description" content="Scherwin Ebrahim, application for Senior Global Social Media Manager (Sports) at Zalando.">
+<meta name="author" content="Scherwin Ebrahim">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --chalk:#F1F4F2; --paper:#FFFFFF; --ink:#151A2B; --soft:#59617A;
+  --pitch:#1E5A41; --cobalt:#2944E0; --rule:#D5DBD8;
+  --display:"Big Shoulders Display","Arial Narrow",sans-serif;
+  --body:"Figtree",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--chalk:#10141F;--paper:#171D2C;--ink:#EEF1F6;--soft:#A3ABC0;--rule:#2A3246;--cobalt:#6F84FF}
+}
+:root[data-theme="dark"]{--chalk:#10141F;--paper:#171D2C;--ink:#EEF1F6;--soft:#A3ABC0;--rule:#2A3246;--cobalt:#6F84FF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--chalk);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;letter-spacing:.005em;margin:0}
+h2{font-size:clamp(40px,6vw,64px)}
+h3{font-size:28px}
+p{margin:0 0 1em;max-width:62ch}
+.lede{color:var(--soft);font-size:18px}
+section.wrap{padding-top:72px;padding-bottom:72px}
+section + section{border-top:1px solid var(--rule)}
+
+/* hero */
+.hero{padding-top:56px;padding-bottom:64px}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:48px;font-size:15px;color:var(--soft)}
+.theme-btn{white-space:nowrap;background:none;border:1px solid var(--rule);color:var(--ink);font-size:14px;padding:6px 12px;border-radius:999px;cursor:pointer}
+.hero h1{font-size:clamp(68px,15vw,184px);font-weight:900;line-height:.82;letter-spacing:-.01em}
+.hero h1 span{display:block}
+.hero h1 .last{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-top:36px}
+.role{font-size:20px;font-weight:600;max-width:36ch;margin:0}
+.role b{color:var(--cobalt)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--chalk);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+
+/* highlights */
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);margin:48px 0 0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.highlights li{padding:24px 20px 4px;text-align:center}
+.highlights li + li{border-left:1px solid var(--rule)}
+.highlights strong{display:block;font-family:var(--display);font-weight:900;font-size:clamp(48px,6.5vw,80px);line-height:.9;color:var(--cobalt)}
+.highlights span{display:block;font-size:15px;color:var(--soft);margin:10px auto 0;max-width:24ch}
+@media (max-width:820px){
+  .highlights{grid-template-columns:1fr}
+  .highlights li,.highlights li + li{padding:20px 0;border-left:0;border-bottom:1px solid var(--rule)}
+}
+
+/* line-up: results board */
+.lineup-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.toggle{display:inline-flex;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:4px}
+.toggle button{border:0;background:none;font-size:15px;font-weight:600;color:var(--soft);padding:9px 16px;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--pitch);color:#fff}
+.board{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.row{border-bottom:1px solid var(--rule);transition:opacity .25s}
+.row.dim{opacity:.3}
+.row-btn{width:100%;display:grid;grid-template-columns:250px 1fr auto 40px;gap:24px;align-items:center;background:none;border:0;color:var(--ink);text-align:left;padding:22px 4px;cursor:pointer}
+.stat-col .n{display:block;font-family:var(--display);font-weight:900;font-size:clamp(44px,5vw,64px);line-height:.85;color:var(--ink);transition:color .2s;white-space:nowrap}
+.stat-col .u{display:block;font-size:13px;color:var(--soft);margin-top:6px;font-weight:500}
+.who .co{display:block;font-family:var(--display);font-weight:800;font-size:30px;line-height:1}
+.who .ti{display:block;color:var(--soft);font-size:15px;margin-top:4px}
+.yr{font-family:var(--display);font-weight:800;font-size:24px;color:var(--soft);white-space:nowrap}
+.plus{width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--rule);display:grid;place-items:center;transition:transform .3s, background .2s}
+.plus svg{width:14px;height:14px}
+.row-btn:hover .stat-col .n, .row.lit .stat-col .n{color:var(--cobalt)}
+.row-btn[aria-expanded="true"] .plus{transform:rotate(45deg);background:var(--ink);color:var(--chalk);box-shadow:none}
+.row-btn[aria-expanded="true"] .stat-col .n{color:var(--cobalt)}
+.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.detail > div{overflow:hidden}
+.row.open .detail{grid-template-rows:1fr}
+.detail ul{margin:0;padding:0 4px 26px 278px;list-style:none;max-width:860px}
+.detail li{position:relative;padding-left:18px;margin-bottom:9px}
+.detail li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:var(--cobalt)}
+.detail .meta{padding:0 4px 10px 278px;font-size:14px;color:var(--soft);font-weight:600}
+@media (max-width:820px){
+  .row-btn{grid-template-columns:1fr auto;gap:10px 14px;padding:18px 2px}
+  .stat-col{grid-column:1/-1}
+  .yr{font-size:18px}
+  .plus{grid-row:2;grid-column:2}
+  .who{grid-column:1}
+  .yr{grid-column:1;grid-row:3}
+  .detail ul,.detail .meta{padding-left:2px}
+}
+
+/* skills */
+.skills-wrap{margin-top:40px}
+.skills-wrap h3{font-size:34px;margin-bottom:18px}
+.pillars{display:flex;gap:22px;overflow-x:auto;padding:4px 4px 12px;margin:0 -4px;scrollbar-width:none}
+.pillars::-webkit-scrollbar{display:none}
+.pillar{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;color:var(--ink);cursor:pointer;width:88px}
+.pillar .ring{width:72px;height:72px;border-radius:50%;padding:3px;background:var(--rule);transition:background .2s}
+.pillar .core{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--paper);border:3px solid var(--chalk)}
+.pillar .core svg{width:28px;height:28px}
+.pillar .lbl{font-size:13px;font-weight:600;text-align:center;line-height:1.2}
+.pillar[aria-pressed="true"] .ring{background:var(--cobalt)}
+.skillbox{min-height:60px;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{font-size:14px;font-weight:500;padding:7px 13px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--rule)}
+.hint{font-size:14px;color:var(--soft);margin:0}
+
+/* misan */
+.misan{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:18px;overflow:hidden;margin-top:28px}
+.stat{background:var(--paper);padding:20px}
+.stat .num{font-family:var(--display);font-weight:900;font-size:clamp(40px,5vw,56px);line-height:1}
+.stat .lbl{font-size:14px;color:var(--soft);margin-top:6px}
+.stat.big{grid-column:1/-1}
+.stat.big .num{font-size:clamp(56px,8vw,88px);color:var(--cobalt)}
+.from{font-size:.5em;color:var(--soft);font-weight:800;margin-right:8px}
+.replay{margin-top:16px;background:none;border:0;color:var(--cobalt);font-weight:600;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px;font-size:16px}
+.video{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;cursor:pointer;border:0;padding:0;width:100%;display:block}
+.video img{width:100%;height:100%;object-fit:cover;opacity:.85;display:block}
+.video .play{position:absolute;inset:0;display:grid;place-items:center}
+.video .play span{width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.video .play svg{margin-left:5px}
+.caption{font-size:14px;color:var(--soft);margin-top:10px}
+
+/* video poster */
+.video.poster{text-decoration:none;color:#fff;background:var(--cobalt)}
+.poster-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.video.poster .play{position:static}
+.poster-t{font-family:var(--display);font-weight:800;font-size:30px}
+.video.poster:hover .play span{transform:scale(1.06)}
+.video .play span{transition:transform .2s}
+
+/* plan */
+.steps{display:flex;gap:8px;margin:28px 0 20px;flex-wrap:wrap}
+.step{flex:1;min-width:150px;text-align:left;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);padding:14px 16px;border-radius:14px;cursor:pointer}
+.step .m{font-family:var(--display);font-weight:900;font-size:30px;line-height:1;display:block}
+.step .t{font-size:14px;color:var(--soft)}
+.step[aria-selected="true"]{border-color:var(--ink);background:var(--ink);color:var(--chalk)}
+.step[aria-selected="true"] .t{color:var(--chalk);opacity:.8}
+.panel{background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:28px}
+.panel ul{margin:0;padding-left:18px}
+.panel li{margin-bottom:10px;max-width:66ch}
+.fineprint{font-size:14px;color:var(--soft);margin-top:14px}
+
+
+
+/* why sport */
+.why{background:var(--pitch);color:#fff;border-radius:24px;padding:56px 36px;margin-top:8px}
+.why h2{color:#fff;font-size:clamp(56px,10vw,120px);font-weight:900;line-height:.85;margin-bottom:28px}
+.why p{font-size:clamp(19px,2.2vw,23px);line-height:1.5;max-width:46ch;margin:0 0 .8em}
+.why p:last-child{margin-bottom:0}
+@media (max-width:820px){.why{padding:40px 22px}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--chalk);border-radius:24px;padding:48px 32px;margin:24px 0 64px}
+.contact h2{color:var(--chalk)}
+.contact p{color:var(--chalk);opacity:.85;margin-top:16px}
+.contact .btn{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
+.contact .btn.ghost{background:transparent;color:var(--chalk)}
+.contact .actions{justify-content:flex-start;margin-top:20px}
+footer{font-size:13px;color:var(--soft);padding-bottom:40px}
+
+@media (max-width:820px){
+  .hero-grid,.misan{grid-template-columns:1fr}
+  .actions{justify-content:flex-start}
+  section.wrap{padding-top:56px;padding-bottom:56px}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="wrap hero">
+  <div class="hero-top">
+    <span>Application, October 2026</span>
+    <button class="theme-btn" id="themeBtn" type="button">Dark mode</button>
+  </div>
+  <h1><span>Scherwin</span><span class="last">Ebrahim</span></h1>
+  <div class="hero-grid">
+    <p class="role">Applying for <b>Senior Global Social Media Manager, Sports</b> at Zalando. I build social channels and the brands behind them, steer agencies and budgets, and measure what works.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:scherwinebrahim95@gmail.com?subject=Senior%20Global%20Social%20Media%20Manager%20(Sports)">Email me</a>
+      <a class="btn ghost" href="#lineup">See the line-up</a>
+    </div>
+  </div>
+  <ul class="highlights" aria-label="Highlights">
+    <li><strong>22K</strong><span>followers grown from 200 on an €8,000 budget</span></li>
+    <li><strong>€500K+</strong><span>budget steered across channels and agencies</span></li>
+    <li><strong>Top 2%</strong><span>of my M.Sc. cohort at Freie Universität Berlin</span></li>
+  </ul>
+</header>
+
+<main>
+<section id="lineup" class="wrap" aria-labelledby="lineupTitle">
+  <div class="lineup-head">
+    <div>
+      <h2 id="lineupTitle">The line-up</h2>
+      <p class="lede" style="margin-top:12px;margin-bottom:0">Every station of my career and the number that defines it. Open one for the details.</p>
+    </div>
+    <div class="toggle" role="group" aria-label="Order">
+      <button type="button" data-order="time" aria-pressed="true">By time</button>
+      <button type="button" data-order="role" aria-pressed="false">For this role</button>
+    </div>
+  </div>
+
+  <ul class="board" id="board"></ul>
+
+  <div class="skills-wrap">
+    <h3>Skills</h3>
+    <nav class="pillars" id="pillars" aria-label="Skill areas"></nav>
+    <div class="skillbox" aria-live="polite">
+      <p class="hint" id="hint">Tap an area to see its skills. The stations where they come from light up.</p>
+      <ul class="chips" id="chips" hidden></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="misanTitle">
+  <div class="misan">
+    <div>
+      <h2 id="misanTitle">Building a channel from 200 followers</h2>
+      <p class="lede" style="margin-top:18px">Together with an emerging music artist I built his brand and social presence from almost nothing. I shaped the brand, the positioning, the content and the campaigns.</p>
+      <div class="stats" id="stats">
+        <div class="stat big"><div class="num"><span class="from">200 to</span><span data-to="22000" data-from="200">22,000</span></div><div class="lbl">followers</div></div>
+        <div class="stat"><div class="num"><span data-to="1.5" data-suffix="M+" data-dec="1">1.5M+</span></div><div class="lbl">streams</div></div>
+        <div class="stat"><div class="num"><span data-to="600" data-suffix="K" data-prefix="~">~600K</span></div><div class="lbl">video views</div></div>
+        <div class="stat"><div class="num"><span data-to="8000" data-prefix="€">€8,000</span></div><div class="lbl">total budget, organic and paid</div></div>
+        <div class="stat"><div class="num">2+</div><div class="lbl">years, Jan 2018 to Mar 2020</div></div>
+      </div>
+      <button class="replay" id="replay" type="button">Replay the count</button>
+    </div>
+    <div>
+      <a class="video poster" href="https://youtu.be/c_2m3MOazGA" target="_blank" rel="noopener">
+        <span class="poster-in">
+          <span class="play"><span><svg width="26" height="30" viewBox="0 0 26 30" aria-hidden="true"><path d="M0 0 L26 15 L0 30 Z" fill="#151A2B"/></svg></span></span>
+          <span class="poster-t">Watch the video on YouTube</span>
+        </span>
+      </a>
+      <p class="caption">Brand, creative concept and coordination of the shoot.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="planTitle">
+  <h2 id="planTitle">My first 90 days</h2>
+  <p class="lede" style="margin-top:18px">How I would start the Sports channel, built on what Zalando has made public.</p>
+  <div class="steps" role="tablist" aria-label="First 90 days">
+    <button class="step" role="tab" id="t1" aria-controls="plan" aria-selected="true" data-step="0"><span class="m">Month 1</span><span class="t">Set the baseline</span></button>
+    <button class="step" role="tab" id="t2" aria-controls="plan" aria-selected="false" data-step="1"><span class="m">Month 2</span><span class="t">Play the calendar</span></button>
+    <button class="step" role="tab" id="t3" aria-controls="plan" aria-selected="false" data-step="2"><span class="m">Month 3</span><span class="t">Test the next sport</span></button>
+  </div>
+  <div class="panel" id="plan" role="tabpanel" aria-labelledby="t1"></div>
+</section>
+
+
+<section class="wrap" aria-labelledby="whyTitle" style="border-top:0">
+  <div class="why">
+    <h2 id="whyTitle">Sport is everything</h2>
+    <p>It's where I switch off, let off steam and feel the most. FC Barcelona has been my club for as long as I can remember, and I grew up watching Messi.</p>
+    <p>I follow football on X and Instagram every day, and to me football and style have never been two separate things.</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="contactTitle" style="border-top:0;padding-top:0">
+  <div class="contact">
+    <h2 id="contactTitle">Let's talk</h2>
+    <p>I look forward to showing you in a conversation how I can grow Zalando's sports channel into a place fans keep coming back to.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:scherwinebrahim95@gmail.com?subject=Senior%20Global%20Social%20Media%20Manager%20(Sports)">scherwinebrahim95@gmail.com</a>
+      <a class="btn ghost" href="tel:+4917620987344">+49 176 2098 7344</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">Scherwin Ebrahim, Berlin. M.Sc. Management &amp; Marketing, Freie Universität Berlin.</footer>
+
+<script>
+const stations = {
+  auto1:{stat:"€500K+",unit:"budget across social, press and trade fairs",yr:"Since 2026",no:"26",name:"AUTO1",title:"Senior PR & Communications Manager, B2B DACH",org:"AUTO1 Group, Berlin",dates:"Jan 2026 to present",
+    pts:["Budget above €500,000 across social media, press and trade fairs, split across channels together with media agencies, with reach and impact evaluated.",
+         "Agencies and external partners briefed and steered, with international project teams and business units in one plan.",
+         "LinkedIn content and media relations in one cross-channel plan, plus trade fair appearances and local events for dealers."]},
+  amzell:{stat:"€1M+",unit:"monthly revenue of the key accounts I advised",yr:"2024–25",no:"24",name:"Amzell",title:"Digital Marketing Consultant, Focus Amazon",org:"Amzell GmbH, Berlin",dates:"Dec 2024 to Nov 2025",
+    pts:["Amazon Ads for branding and performance, Brand Stores and A+ Content for key accounts with more than €1M in monthly revenue.",
+         "Monthly performance reporting against client targets, with higher ROAS and conversion rates through continuous A/B testing.",
+         "Turned a recurring client need into a strategy consulting product for the agency, and developed and launched it.",
+         "Represented Amzell as an Amazon Advertising expert at industry events, and co-initiated a recurring industry event."]},
+  kpmg:{stat:"Big 4",unit:"market analyses for cost savings",yr:"2022",no:"22",name:"KPMG",title:"Working Student, Central Services, Finance & Procurement",org:"KPMG, Berlin",dates:"Jul 2022 to Oct 2022",
+    pts:["Structured market analyses to identify cost-saving potential.","Preparation of negotiations and communication with suppliers, bidders and internal teams."]},
+  misan:{stat:"22K",unit:"community built from 200 followers",yr:"2018–20",no:"18",name:"Misan",title:"Marketing Manager & Creative Strategist",org:"Misan GbR, Heidelberg / Berlin",dates:"Jan 2018 to Mar 2020",
+    pts:["Built the social presence of an emerging music artist from scratch, from 200 to 22,000 followers, with 1.5M+ streams on a budget of €8,000.",
+         "Brand, positioning, recurring storylines and visual concepts for Instagram, YouTube and streaming, organic and paid, steered by KPIs.",
+         "Artist management in a leading role, with creative direction of video shoots and quality control of everything that went out."]},
+  fu:{stat:"1.2",unit:"M.Sc. grade, top 2% of cohort",yr:"2019–24",no:"19",name:"FU Berlin",title:"M.Sc. Management & Marketing",co:"FU Berlin & Bocconi",org:"Freie Universität Berlin, Berlin and Milan",dates:"Oct 2019 to Sep 2024",
+    pts:["Final grade 1.2, top 2% of cohort. B.Sc. Business Administration before that, with a thesis on Inditex.",
+         "Semester at Bocconi in fashion and luxury management, including Luxury Companies in the Global Landscape with 30/30 cum laude.",
+         "Circle of Excellence in Marketing with Porsche and Accenture. Deutschlandstipendium."]}
+};
+const orders = {role:["misan","auto1","amzell","fu","kpmg"], time:["auto1","amzell","kpmg","fu","misan"]};
+const ICON = {
+  channel:'<svg viewBox="0 0 28 28"><rect x="3" y="15" width="5" height="10" rx="1" fill="currentColor"/><rect x="11.5" y="9" width="5" height="16" rx="1" fill="currentColor"/><rect x="20" y="3" width="5" height="22" rx="1" fill="currentColor"/></svg>',
+  partners:'<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="10" cy="14" r="7"/><circle cx="18" cy="14" r="7"/></svg>',
+  budget:'<svg viewBox="0 0 28 28"><text x="14" y="21" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="22" fill="currentColor">€</text></svg>',
+  performance:'<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M3 22 10 14l5 4 10-12"/><path d="M19 6h6v6"/></svg>',
+  brand:'<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"><path d="M14 7a2.5 2.5 0 1 1 2.5 2.5L14 11v2L3 21h22l-11-8"/></svg>',
+  talent:'<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="10" y="3" width="8" height="13" rx="4"/><path d="M6 13a8 8 0 0 0 16 0M14 21v4M10 25h8"/></svg>',
+  tools:'<svg viewBox="0 0 28 28" fill="currentColor"><rect x="3" y="3" width="9.5" height="9.5" rx="2"/><rect x="15.5" y="3" width="9.5" height="9.5" rx="2"/><rect x="3" y="15.5" width="9.5" height="9.5" rx="2"/><rect x="15.5" y="15.5" width="9.5" height="9.5" rx="2"/></svg>'
+};
+const pillars = [
+  {id:'channel',name:'Channel building',st:['misan','auto1'],skills:['Social media strategy','Channel building','Editorial planning','Content pillars','Organic & paid social','Community growth','Storytelling','Instagram, YouTube & TikTok','LinkedIn content','Newsletter marketing','Landing pages']},
+  {id:'partners',name:'Partners',st:['auto1','misan','kpmg'],skills:['Agency briefing & steering','Creative direction','Quality control of creative work','Stakeholder management','International project teams','Service provider coordination','Negotiation & supplier management']},
+  {id:'talent',name:'Talent & events',st:['misan','amzell','auto1'],skills:['Talent management','Speaking at industry events','Event formats (co-initiated a recurring industry event)','Trade fairs & local events','New business pitches','Pitching & presentations']},
+  {id:'budget',name:'Budget & media',st:['auto1','amzell','misan'],skills:['Budget responsibility (€500K+)','Spend allocation across channels','Media planning with agencies','Paid social','Amazon Ads (branding & performance)','Brand Stores & A+ Content']},
+  {id:'performance',name:'Performance',st:['auto1','amzell','misan','kpmg'],skills:['KPI reporting','Reach & impact evaluation','A/B testing','Native platform analytics','Google Analytics','Market & competitor analysis','Excel (pivot tables) & PowerPoint']},
+  {id:'brand',name:'Brand & fashion',st:['misan','fu','auto1'],skills:['Brand positioning','Tone of voice & brand consistency','Fashion & luxury brand management','Fashion business models & value chains','Fashion retail (thesis on Inditex)','Luxury markets (30/30 cum laude at Bocconi)']},
+  {id:'tools',name:'Tools',st:['auto1','amzell','misan'],skills:['Meta Business Suite & Ads Manager','Instagram Insights','YouTube Studio','Spotify for Artists','Amazon Seller Central & Ads Console','Generative AI tools','HubSpot','Brevo','WordPress','TYPO3','Figma','Photoshop','Canva','Asana','Jira','Confluence','MS Office']}
+];
+const plan = [
+  ["Study what football and running fans already respond to, on Zalando's channels and in the communities around them.",
+   "Define content pillars for football and running and a monthly baseline the team and partners can plan on.",
+   "Agree with Global Social Media and Brand which moments Sports owns and which it feeds."],
+  ["Build around the partnerships Zalando already has: the DFB, and the marathons in Berlin and Copenhagen.",
+   "Brief creative partners for native content per moment, with room kept free for reactive posts.",
+   "Report growth against targets every month and move effort to what works."],
+  ["Test cycling in small formats, since Zalando has already built up its range there.",
+   "Write the business case for the next expansion, based on audience response and commercial relevance."]
+];
+
+const board=document.getElementById('board');
+let order='time';
+const plusSvg='<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"/></svg>';
+Object.entries(stations).forEach(([id,s])=>{
+  const li=document.createElement('li'); li.className='row'; li.dataset.id=id;
+  li.innerHTML=`<button class="row-btn" type="button" aria-expanded="false" aria-controls="d-${id}">
+      <span class="stat-col"><span class="n">${s.stat}</span><span class="u">${s.unit}</span></span>
+      <span class="who"><span class="co">${s.co||s.org.split(',')[0]}</span><span class="ti">${s.title}</span></span>
+      <span class="yr">${s.yr}</span>
+      <span class="plus">${plusSvg}</span>
+    </button>
+    <div class="detail" id="d-${id}"><div><p class="meta">${s.dates}, ${s.org.split(', ').slice(1).join(', ')}</p><ul>${s.pts.map(p=>`<li>${p}</li>`).join('')}</ul></div></div>`;
+  li.querySelector('.row-btn').addEventListener('click',()=>toggle(id));
+  board.appendChild(li);
+});
+function toggle(id,force){
+  const li=board.querySelector(`[data-id="${id}"]`), btn=li.querySelector('.row-btn');
+  const open = force!==undefined ? force : btn.getAttribute('aria-expanded')!=='true';
+  btn.setAttribute('aria-expanded',open); li.classList.toggle('open',open);
+}
+function arrange(){
+  const rows=[...board.children], first=new Map(rows.map(r=>[r,r.getBoundingClientRect().top]));
+  orders[order].forEach(id=>board.appendChild(board.querySelector(`[data-id="${id}"]`)));
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  rows.forEach(r=>{const d=first.get(r)-r.getBoundingClientRect().top; if(!d) return;
+    r.animate([{transform:`translateY(${d}px)`},{transform:'none'}],{duration:450,easing:'cubic-bezier(.4,.1,.2,1)'});});
+}
+document.querySelectorAll('[data-order]').forEach(b=>b.addEventListener('click',()=>{
+  order=b.dataset.order;
+  document.querySelectorAll('[data-order]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  arrange();
+}));
+
+/* skills */
+const pEl=document.getElementById('pillars'), chips=document.getElementById('chips'), hint=document.getElementById('hint');
+let active=null;
+pillars.forEach(p=>{
+  const b=document.createElement('button'); b.type='button'; b.className='pillar'; b.setAttribute('aria-pressed','false');
+  b.innerHTML=`<span class="ring"><span class="core">${ICON[p.id]}</span></span><span class="lbl">${p.name}</span>`;
+  b.onclick=()=>{
+    active = active===p.id ? null : p.id;
+    pEl.querySelectorAll('.pillar').forEach(x=>x.setAttribute('aria-pressed', x===b && !!active));
+    if(active){chips.innerHTML=p.skills.map(s=>`<li>${s}</li>`).join('');chips.hidden=false;hint.hidden=true;}
+    else{chips.hidden=true;hint.hidden=false;}
+    board.querySelectorAll('.row').forEach(t=>{
+      t.classList.toggle('lit', !!active && p.st.includes(t.dataset.id));
+      t.classList.toggle('dim', !!active && !p.st.includes(t.dataset.id));
+    });
+  };
+  pEl.appendChild(b);
+});
+arrange(); toggle('auto1',true);
+
+/* count-up */
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const nums=[...document.querySelectorAll('[data-to]')];
+const fmt=(el,v)=>{const d=+el.dataset.dec||0;return (el.dataset.prefix||'')+(d?v.toFixed(d):Math.round(v).toLocaleString('en-US'))+(el.dataset.suffix||'');};
+function count(){
+  if(reduce) return;
+  const t0=performance.now(),D=1400;
+  (function f(t){const k=Math.min(1,(t-t0)/D),e=1-Math.pow(1-k,3);
+    nums.forEach(el=>{const to=+el.dataset.to,from=+(el.dataset.from||0);el.textContent=fmt(el,from+(to-from)*e);});
+    if(k<1)requestAnimationFrame(f);})(t0);
+}
+let counted=false;
+if('IntersectionObserver' in window){
+  new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting&&!counted){counted=true;count();o.disconnect();}})},{threshold:.4}).observe(document.getElementById('stats'));
+}
+document.getElementById('replay').addEventListener('click',count);
+
+
+/* plan */
+const panel=document.getElementById('plan');
+function showStep(i){
+  document.querySelectorAll('.step').forEach((s,j)=>s.setAttribute('aria-selected',i===j));
+  panel.setAttribute('aria-labelledby','t'+(i+1));
+  panel.innerHTML='<ul>'+plan[i].map(p=>`<li>${p}</li>`).join('')+'</ul>';
+}
+document.querySelectorAll('.step').forEach(s=>s.addEventListener('click',()=>showStep(+s.dataset.step)));
+showStep(0);
+
+/* theme */
+const root=document.documentElement, tb=document.getElementById('themeBtn');
+const isDark=()=>root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+const label=()=>tb.textContent=isDark()?'Light mode':'Dark mode';
+tb.addEventListener('click',()=>{root.dataset.theme=isDark()?'light':'dark';label();});
+label();
+</script>
+</body>
+</html>
